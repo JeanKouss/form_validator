@@ -1,2 +1,2 @@
 # JS-form_validator
-Make your HTML forms validation easier with this!
+Make your HTML forms validation easier!
