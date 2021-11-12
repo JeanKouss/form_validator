@@ -89,7 +89,7 @@ class ErrorOutput {
 
     /**
      * Set current ErrorOutput proprieties to those parameters if they are prioritized and out put the error message in the HTMLElement.
-     * !!THis method is not appropriate if many validators are using the same output.
+     * !!This method is not appropriate if many validators are using the same output.
      * !!DO NOT CALL THIS DIRECTLY. Call the signalMethod instead.
      * @param {Element} errOrigin 
      * @param {number} errCode 
