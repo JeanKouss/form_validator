@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src='../input_errors.js'></script>
-    <script src='../error_output.js'></script>
-    <script src='../text_input_validator.js'></script>
-    <script src='../password_input_validator.js'></script>
+    <script src='../sources/InputError.js'></script>
+    <script src='../sources/ErrorOutput.js'></script>
+    <script src='../sources/InputValidator.js'></script>
+    <script src='../sources/TextInputValidator.js'></script>
+    <script src='../sources/PasswordInputValidator.js'></script>
     <title>Document</title>
 </head>
 <body>
@@ -15,16 +16,17 @@
     <form action="#">
         <p>
             <label for="first">Input 1 </label><br>
-            <input type="text" class="first" id="first" placeholder="minLength 4">
+            <input type="text" class="first" id="first" placeholder="minLength 4" minlength="4">
         </p>
         <p>
             <label for="second">Input 2 </label><br>
-            <input type="text" class="second" placeholder="minLength 4, maxLength 10">
+            <input type="text" class="second" placeholder="minLength 4, maxLength 10" minlength="4" maxlength="10">
         </p>
         <p>
             <label for="third">password </label><br>
-            <input type="password" class="third" placeholder="At least 5 characters">
+            <input type="password" class="third" placeholder="At least 5 characters" minlength="5">
         </p>
+        <button>Ok</button>
     </form>
     <p class="outputEl" style="color: red;">
 

@@ -17,8 +17,8 @@ class PasswordInputValidator extends TextInputValidator{
 
     verify() {
         if(this.input.value.length<this.minLen) {
-            return [3, 1]; // [errorCode, priority]
+            return new InputError(this, 3, 1); // [errorCode, priority]
         }
-        return [0,0];
+        return new InputError(this, 0, 0);
     }
 }

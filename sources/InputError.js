@@ -1,11 +1,25 @@
 /**
- * Class which define the list of errors.
+ * Class which define the list of errors message.
  * 
  * Every error have its code, and an user comprehensive message,
  * translated in supported languages.
  * This message must help user(website visitor) undestand the error of his input.
  */
-class InputErrors {
+class InputError {
+    /**
+     * 
+     * @param {InputValidator} origin 
+     * @param {int} code 
+     * @param {int} priority 
+     */
+    constructor(origin, code=0, priority=0) {
+        this.origin = origin;
+        this.code = code;
+        this.priority = priority;
+    }
+
+    static suportedLang = ['en', 'fr'];
+    static lang = 'en';
     /**
      * Sets the language into which the error is been displaying,
      * to an another supported one.
@@ -38,12 +52,9 @@ class InputErrors {
         return this.error[code][this.lang];
     }
 
-    static suportedLang = ['en', 'fr'];
-    static lang = 'en';
-
     /* 
     Errors object
-    Every error has a code and ils user(website visitor) comprehensive traduction in all supported language.
+    Every error has a code and a user(website visitor) comprehensive traduction in all supported language.
 
     !! Notes for editing
     -The error code must be the same as its index/key in the object.
